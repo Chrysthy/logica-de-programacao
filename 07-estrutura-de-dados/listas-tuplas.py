@@ -16,18 +16,40 @@ def exibeTarefas():
 
 
 def concluirTarefa(tarefa):
-    global tarefas
+    global tarefas  # tarefas recebe uma lista nova
 
     tarefas = [(t[0], "concluída") if t[0] == tarefa else t for t in tarefas]
+
+
+def removerTarefa(tarefa):
+    global tarefas
+    tarefas = [t for t in tarefas if t[0] != tarefa]
+
+
+def buscarTarefa(tarefa):
+    resultado = [t for t in tarefas if t[0] != tarefa.lower()]
+
+    if len(resultado) > 0:
+        for titulo, status in resultado:
+            print(f'Encontrada: {titulo} - Status: {status}')
+    else:
+        print(f'Tarefa não encontrada: {tarefa}')
 
 
 adicionaTarefa("Estudar Python")
 adicionaTarefa("Lavar a louça")
 exibeTarefas()
-print('Agora vou concluir a tarefa')
-concluirTarefa('Estudar Python')
-exibeTarefas()
 
+buscarTarefa("Estudar Python")
+
+
+# print('Agora vou concluir a tarefa')
+# concluirTarefa('Estudar Python')
+# concluirTarefa('Ir ao mercado')  # Tarefa não existe
+# print('Agora vou remover a tarefa')
+# removerTarefa('Estudar Python')
+# exibeTarefas()
+# buscarTarefa('Arrumar o quarto')
 
 # List comprehension (forma reduzida de criar listas)
 

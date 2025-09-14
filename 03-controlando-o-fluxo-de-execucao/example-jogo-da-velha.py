@@ -15,16 +15,19 @@ def exibirTabuleiro():
 
 
 def jogada(linha, coluna):
+    if tabuleiro [linha][coluna != '']:
+        print('Jogada inválida! Tente novamente.')
+        return jogador
+
     tabuleiro[linha][coluna] = jogador
 
-    if jogador == 'X':
-        return 'O'
-    else: 
-        return'X'
+    return 'O' if jogador == 'X' else 'X'
 
+while True:
+    print(f'Jogador da vez: {jogador}')
 
+    linha = input('Digite a linha (0, 1, 2): ')
+    coluna = input('Digite a coluna (0, 1, 2): ')
+    jogador = jogada(int(linha), int(coluna))
 
-jogador = jogada(1,1)
-jogador = jogada(1,2)
-
-exibirTabuleiro()
+    exibirTabuleiro()

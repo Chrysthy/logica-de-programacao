@@ -1,6 +1,7 @@
 # lista = [1, 2, 3, 4]
 # tupla = (1, 2, 3, 4)
 
+import os
 # Lista de Tarefas
 tarefas = []
 
@@ -11,6 +12,10 @@ def adicionaTarefa(tarefa):
 
 
 def exibeTarefas():
+    if not tarefas:
+        print('A lista de tarefas está vazia.')
+        return
+
     for tarefa in tarefas:
         print(f'{tarefa[0]} - Status: {tarefa[1]}')
 
@@ -27,7 +32,7 @@ def removerTarefa(tarefa):
 
 
 def buscarTarefa(tarefa):
-    resultado = [t for t in tarefas if t[0] != tarefa.lower()]
+    resultado = [t for t in tarefas if t[0] == tarefa.lower()]
 
     if len(resultado) > 0:
         for titulo, status in resultado:
@@ -36,13 +41,49 @@ def buscarTarefa(tarefa):
         print(f'Tarefa não encontrada: {tarefa}')
 
 
-adicionaTarefa("Estudar Python")
-adicionaTarefa("Lavar a louça")
-exibeTarefas()
+while True:
+    os.system('cls | clear')
 
-buscarTarefa("Estudar Python")
+    print('Boas Vindas ao gerenciador de tarefas!')
+    print()
+    print('O que você quer fazer agora?')
+    print('1 - Listar tarefas')
+    print('2 - Adicionar tarefas')
+    print('3 - Remover tarefa')
+    print('4 - Marcar tarefa como concluída')
+    print('5 - Buscar tarefa')
+    print('0 - Sair')
+
+    opcao = int(input('Digite a opção desejada: '))
+
+    match opcao:
+        case 1:
+            exibeTarefas()
+        case 2:
+            tarefa = input('Digite o nome da tarefa: ')
+            adicionaTarefa(tarefa)
+        case 3:
+            tarefa = input('Digite o nome da tarefa a ser removida: ')
+            removerTarefa(tarefa)
+        case 4:
+            tarefa = input('Digite o nome da tarefa a ser concluída: ')
+            concluirTarefa(tarefa)
+        case 5:
+            tarefa = input('Digite o nome da tarefa a ser buscada: ')
+            buscarTarefa(tarefa)
+        case 0:
+            break
+        case _:
+            print('Opção inválida! Tente novamente.')
+
+    print()
+    input('Pressione Enter para continuar...')
 
 
+# adicionaTarefa("Estudar Python")
+# adicionaTarefa("Lavar a louça")
+# exibeTarefas()
+# buscarTarefa("Estudar Python")
 # print('Agora vou concluir a tarefa')
 # concluirTarefa('Estudar Python')
 # concluirTarefa('Ir ao mercado')  # Tarefa não existe

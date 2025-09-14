@@ -15,7 +15,11 @@ def exibirTabuleiro():
 
 
 def jogada(linha, coluna):
-    if tabuleiro [linha][coluna != '']:
+    if (
+        linha < 0 or linha > 2 or    
+        coluna < 0 or coluna > 2 or
+        tabuleiro[linha][coluna] != ''
+    ):
         print('Jogada inválida! Tente novamente.')
         return jogador
 
@@ -26,8 +30,13 @@ def jogada(linha, coluna):
 while True:
     print(f'Jogador da vez: {jogador}')
 
-    linha = input('Digite a linha (0, 1, 2): ')
-    coluna = input('Digite a coluna (0, 1, 2): ')
-    jogador = jogada(int(linha), int(coluna))
+    try:
+        linha = input('Digite a linha (0, 1, 2): ')
+        coluna = input('Digite a coluna (0, 1, 2): ')
+        jogador = jogada(int(linha), int(coluna))
+    except (ValueError):
+        print('Entrada inválida! Por favor, digite valores numéricos inteiros entre 0 e 2para linha e coluna.')
+    except (IndexError):
+        print('Entrada inválida! Por favor, digite valores numéricos inteiros entre 0 e 2para linha e coluna.')
 
     exibirTabuleiro()

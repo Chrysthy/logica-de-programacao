@@ -1,4 +1,6 @@
-<h1 align="center">Lógica de Programação - RocketSeat <img width="60" height="60" alt="image" src="https://github.com/user-attachments/assets/07fdc872-bf77-4cd6-9e89-39076543443c"/></h1>
+<h1 align="center">Programming Logic - RocketSeat <img width="60" height="60" alt="image" src="https://github.com/user-attachments/assets/07fdc872-bf77-4cd6-9e89-39076543443c"/></h1>
+
+<p align="center">Structured programming logic: a secure foundation to grow your coding skills and explore other development areas – by <a href="https://www.rocketseat.com.br/formacao/logica-de-programacao">RocketSeat</a>.</p>
 
 <p align="center">  
   <a href="#-screenshots">Screenshots</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;

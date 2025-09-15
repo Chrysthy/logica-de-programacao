@@ -18,3 +18,10 @@
 <img src=".github/gif-do-projeto.gif" alt="gif do projeto">
 
 <br>
+
+## 🛠 Technologies
+
+- Python
+- Git and GitHub
+
+<br>

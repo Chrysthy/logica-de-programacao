@@ -3,7 +3,7 @@
 <p align="center">  
   <a href="#-screenshots">Screenshots</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-features">Features</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-learning-outcomes">Learning Outcomes</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-license">License</a>
 </p>
 
@@ -26,9 +26,16 @@
 
 <br>
 
-## ✨ Features
+## 🎯 Learning Outcomes
 
- -
+During the course, the following topics were covered:
+
+- Variables and data types  
+- Conditional statements (if, else, elif)  
+- Loops (for, while)  
+- Functions and code modularization  
+- Lists and data manipulation  
+- Logical thinking and problem-solving  
 
 <br>
 

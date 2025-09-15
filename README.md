@@ -17,7 +17,7 @@
 
 ## 📸 Screenshots
 
-<img src=".github/certificado-do-projeto.pdf" alt="certificado do projeto">
+<img align="center" width="600" src=".github/certificado-do-projeto.png" alt="certificado do projeto">
 
 <br>
 
